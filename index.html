@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stock Predictor</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 48px auto; padding: 0 16px; }
+    .card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; }
+    .btns a { display: inline-block; padding: 10px 14px; border-radius: 10px; border: 1px solid #111827; margin-right: 10px; }
+    .muted { color: #6b7280; }
+    ul { line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <h1>📈 Stock Predictor (ML + Streamlit)</h1>
+  <p class="muted">Portfolio project — educational only (not financial advice).</p>
+
+  <div class="card">
+    <div class="btns">
+      <a href="PASTE_STREAMLIT_URL_HERE">Live Demo</a>
+      <a href="PASTE_GITHUB_REPO_URL_HERE">GitHub Repo</a>
+    </div>
+
+    <h3>What it does</h3>
+    <ul>
+      <li>Uses 5-year daily price data (Yahoo Finance via yfinance).</li>
+      <li>Trains a Ridge Regression model on simple time-series features (momentum, trend, volatility).</li>
+      <li>Shows accuracy on the <b>last 30 trading days</b>:
+        <ul>
+          <li><b>Up/Down Accuracy</b> (% of days direction was predicted correctly)</li>
+          <li><b>Within X% Accuracy</b> (% of predictions within a chosen error margin)</li>
+        </ul>
+      </li>
+      <li>Includes a 10+ company recursive backtest (predictions feed into future predictions).</li>
+    </ul>
+  </div>
+</body>
+</html>
