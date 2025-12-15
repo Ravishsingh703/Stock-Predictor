@@ -1,0 +1,14 @@
+{
+  "ticker": "TSLA",
+  "period": "5y",
+  "run_time_utc": "2025-12-15T11:18:04.967699Z",
+  "mae": 46.83313248905587,
+  "mape_pct": 10.569612462313646,
+  "direction_accuracy_pct": 13.333333333333334,
+  "within_tol_accuracy_pct": 6.666666666666667,
+  "n_days": 15,
+  "tol_pct": 0.02,
+  "alpha": 1.0,
+  "recursive": true,
+  "backtest_csv": "/Users/ravish/Documents/Stock-Predictor/data/learning/last_15d_backtest_TSLA_5y.csv"
+}

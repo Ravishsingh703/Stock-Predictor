@@ -1,0 +1,14 @@
+{
+  "ticker": "AMZN",
+  "period": "5y",
+  "run_time_utc": "2025-12-15T11:18:27.702264Z",
+  "mae": 14.00582870260971,
+  "mape_pct": 6.172064284100629,
+  "direction_accuracy_pct": 55.00000000000001,
+  "within_tol_accuracy_pct": 0.0,
+  "n_days": 20,
+  "tol_pct": 0.02,
+  "alpha": 1.0,
+  "recursive": true,
+  "backtest_csv": "/Users/ravish/Documents/Stock-Predictor/data/learning/last_20d_backtest_AMZN_5y.csv"
+}
