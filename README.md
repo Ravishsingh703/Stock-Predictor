@@ -1,35 +1,53 @@
 # Stock Price Predictor (ML + Streamlit)
 
-A one-day portfolio project that builds an end-to-end stock prediction pipeline: fetch 5-year daily stock data, engineer time-series features, train a regression model, evaluate against a baseline, and serve results through a Streamlit web app.
+🚀 **Live App:** https://stock-predictor-32hss6pkwvozushvzneyxd.streamlit.app/
 
-> Disclaimer: This project is for learning/portfolio purposes only and is **not** financial advice.
+A portfolio project that builds an end-to-end stock prediction pipeline using 5-year daily market data, simple time-series feature engineering, and a Ridge Regression model — wrapped in an interactive Streamlit web app.
 
-## Demo
-- **Live Streamlit App:** https://YOUR_STREAMLIT_APP_URL_HERE  
-- **Showcase Website (GitHub Pages):** https://YOUR_GITHUB_PAGES_URL_HERE  
+> **Disclaimer:** This project is for learning/portfolio purposes only and is **not financial advice**.
 
-## What this project does
-1. Downloads historical stock data using `yfinance` (OHLCV).
-2. Creates simple, explainable features (momentum, trend, volatility).
-3. Trains a **Ridge Regression** model with **time-series cross-validation**.
-4. Compares performance to a naive baseline: **tomorrow’s close = today’s close**.
-5. Saves outputs (CSV, plots, model, and metrics JSON) into organized subfolders.
+---
 
-## Features used
-The model uses a small set of interpretable time-series features:
+## What you can do in the app
+
+### 1) Next-day prediction (single company)
+- Enter a ticker (e.g., `AAPL`, `TSLA`, `MSFT`)
+- View a price chart and a **next-day close prediction**
+
+### 2) Accuracy over the last 30 trading days (simple % metrics)
+The app evaluates recent performance by predicting day-by-day and comparing predictions to what actually happened:
+- **Up/Down Accuracy (%):** How often the model correctly predicted direction vs the previous day
+- **Within X% Accuracy (%):** How often predictions were within a chosen error tolerance (default 2%)
+- **MAPE (%):** Average percent error over the evaluation period
+
+You can optionally enable **Recursive mode**, where predictions feed into future inputs (harder and more realistic, errors can compound).
+
+### 3) Backtest 10+ companies (recursive simulation)
+Runs a multi-ticker backtest using **5 years of data** and produces:
+- A summary table across companies (error + direction metrics)
+- Per-company charts: **Actual vs Predicted** and **Absolute Error** over time
+
+---
+
+## Model + features
+
+### Model
+- **Ridge Regression (scikit-learn)**  
+  A regularized linear regression model that is fast, stable, and easy to explain.
+
+### Features (computed from Close price history)
+The model uses interpretable time-series features:
 - `ret_1`: 1-day return (short-term momentum)
 - `ret_5`: 5-day return (weekly momentum)
 - `ma_5`: 5-day moving average (short trend)
 - `ma_20`: 20-day moving average (medium trend)
-- `vol_20`: 20-day return standard deviation (volatility)
+- `vol_20`: 20-day volatility (std of returns)
 
-**Target:** next-day closing price (`y_next_close`).
+### Target
+- **Next-day closing price**
 
-## Model
-- **Ridge Regression (scikit-learn)**  
-  Ridge is a regularized linear model that is fast, stable, and a strong baseline for noisy financial time-series.
-- **TimeSeriesSplit Cross-Validation**  
-  We avoid data leakage by ensuring training data always comes **before** test data in time.
+---
 
 ## Project structure
-All code lives in `code/`. Generated outputs are written into `data/`.
+
+All code lives in `code/`. Generated outputs are saved under `data/`.
