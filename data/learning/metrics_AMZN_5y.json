@@ -1,0 +1,20 @@
+{
+  "ticker": "AMZN",
+  "period": "5y",
+  "run_time_utc": "2025-12-15T10:40:06.657555Z",
+  "features": [
+    "ret_1",
+    "ret_5",
+    "ma_5",
+    "ma_20",
+    "vol_20"
+  ],
+  "baseline_mae": 2.473750187800481,
+  "ridge_cv_mae": 3.6064133810503494,
+  "last_close": 230.27999877929688,
+  "predicted_next_close": 229.20413509222385,
+  "raw_csv": "/Users/ravish/Documents/Stock-Predictor/data/csv/raw_AMZN_5y.csv",
+  "features_csv": "/Users/ravish/Documents/Stock-Predictor/data/learning/features_AMZN_5y.csv",
+  "model_path": "/Users/ravish/Documents/Stock-Predictor/data/models/ridge_AMZN_5y.joblib",
+  "graph_path": "/Users/ravish/Documents/Stock-Predictor/data/graphs/MSFT_5y_prediction_plot.png"
+}
