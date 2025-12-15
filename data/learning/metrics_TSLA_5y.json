@@ -1,7 +1,7 @@
 {
   "ticker": "TSLA",
   "period": "5y",
-  "run_time_utc": "2025-12-15T10:50:56.203277Z",
+  "run_time_utc": "2025-12-15T10:52:35.687048Z",
   "features": [
     "ret_1",
     "ret_5",
@@ -10,9 +10,9 @@
     "vol_20"
   ],
   "baseline_mae": 7.34372790873292,
-  "ridge_cv_mae": 9.470371057118168,
+  "ridge_cv_mae": 9.90922438867137,
   "last_close": 446.8900146484375,
-  "predicted_next_close": 444.4006804068467,
+  "predicted_next_close": 445.2328602604825,
   "raw_csv": "/Users/ravish/Documents/Stock-Predictor/data/csv/raw_TSLA_5y.csv",
   "features_csv": "/Users/ravish/Documents/Stock-Predictor/data/learning/features_TSLA_5y.csv",
   "model_path": "/Users/ravish/Documents/Stock-Predictor/data/models/ridge_TSLA_5y.joblib",
